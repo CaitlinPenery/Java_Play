@@ -1,7 +1,7 @@
 # Java_Play
 Small java projects to further skills.
 
-### ToDo
+#### ToDo
 
 - Create a menu to access the different apps.
 - Add more mini games/apps.
@@ -11,7 +11,7 @@ Small java projects to further skills.
 
 Text based calculator with minor functionality.
 
-### ToDo
+#### ToDo
 
 - Seperate out the different methods to improve OOP.
 - Add more than basic calculations.
@@ -21,4 +21,4 @@ Text based calculator with minor functionality.
 
 Text based 2 player battleship game.
 
-### Todo
+#### Todo
