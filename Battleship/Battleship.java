@@ -1,9 +1,14 @@
 import java.util.*;
 import java.io.*;
-import java.util.Scanner;
+
 
 public class Battleship {
+
+  private static Scanner scanner;
+
 	public static void main(String[] args) {
+
+    scanner = new Scanner(System.in);
 
     // Declare and initialize 2D arrays.
     char[][] player1 = {{'-', '-', '-', '-', '-'},
@@ -20,34 +25,43 @@ public class Battleship {
 
     System.out.println("Welcome to Battleship!\n");
 
+    System.out.println("PLAYER 1, ENTER YOUR SHIPS\' COORDINATES.");
+
     assignBattleShip(player1);
 
     printBattleShip(player1);
     }
 
-  // Seperate method for user input?
+  // Method to assign ship locations to game board.
   private static void assignBattleShip(char[][] player) {
-
-    // Declare and initialize scanner.
-    Scanner userInput = new Scanner(System.in);
 
     int count = 1;
 
     String a;
     String b;
 
-    System.out.println("PLAYER 1, ENTER YOUR SHIPS’ COORDINATES.");
+    do {
+      System.out.println("Enter ship " + count + " location:");
 
-    while (count < 6) {
-      
-      System.out.println("Enter ship" + count + " location:");
+      a = scanner.next();
+      b = scanner.next();
 
-      a = userInput.next();
-      b = userInput.next();
+      // converting value to integer
+      int row = Integer.parseInt(a);
+      int col = Integer.parseInt(b);
 
-      // Only count++ when userInput is valid
-      count++;
-    }
+
+      if (row > 4 || col > 4) {
+        System.out.println("Invalid coordinates. Choose different coordinates.");
+      } else  if (player[row][col] == '@') {
+        System.out.println("You already have a ship there. Choose different coordinates.");
+      } else if ((row >= 0 && row <= 4) && (col >= 0 && col <= 5)) {
+        // Assigning new element to 2D array
+        player[row][col] = '@';
+        // Only count++ when userInput is valid
+        count++;
+      }
+    } while(count < 6);
 
   }
 
