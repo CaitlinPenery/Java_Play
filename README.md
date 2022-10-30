@@ -21,4 +21,9 @@ Text based calculator with minor functionality.
 
 Text based 2 player battleship game.
 
-#### Todo
+#### ToDo
+
+- Create hit method.
+  1. New 2D array to place hit and misses on.
+  2. Error messages for used coordinates and out of bounds values.
+- 
