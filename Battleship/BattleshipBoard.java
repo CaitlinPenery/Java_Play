@@ -1,13 +1,13 @@
 public class BattleshipBoard {
 
-  public char[][] board;
+  private char[][] startingBoard = {{'-', '-', '-', '-', '-'},
+                                    {'-', '-', '-', '-', '-'},
+                                    {'-', '-', '-', '-', '-'},
+                                    {'-', '-', '-', '-', '-'},
+                                    {'-', '-', '-', '-', '-'}};
 
-  public BattleshipBoard(char[][] playerBoard){
-    board = playerBoard;
-  }
-
-  public char[][] toChar(){
-    return board;
+  public char[][] getBoard(){
+    return startingBoard;
   }
 
 }
